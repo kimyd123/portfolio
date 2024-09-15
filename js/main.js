@@ -38,3 +38,17 @@ const io = new IntersectionObserver(entries => {
       const about_skills_box = document.querySelector('.about_skills_box');
       io_skillbox.observe(about_skills_box);
 
+
+      //내비게이션바
+
+      const nav = document.querySelector('#header');
+      const header_gnb = document.querySelector('.header_gnb');
+      
+      window.addEventListener('wheel', function(e){
+        if(e.deltaY > 0){
+          nav.classList.add('stiky');
+        }else{
+          nav.classList.remove('stiky');
+        }
+        console.log(e.deltaY);
+      });
