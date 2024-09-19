@@ -56,6 +56,7 @@ const gsap_item = document.querySelector('.gsap_item');
 const visual = document.querySelector('#visual');
 
 const gsap_item2 = document.querySelector('.gsap_item2');
+const gsap_item3 = document.querySelector('.gsap_item3');
 const work = document.querySelector('#work');
 
 gsap.to(gsap_item,{ 
@@ -72,13 +73,24 @@ gsap.to(gsap_item,{
 )
 
 gsap.to(gsap_item2,{ 
-  x : 1000, 
   y : 1000, 
   scrollTrigger: {
   trigger: work, // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
   start: "top 50%", // 애니메이션 시작시점
   end:"bottom top", // 애니메이션 종료시점
   scrub: 1,
-  markers: true // 트리거 마커의 표시(boolean)
+  // markers: true 
 }}
 )
+
+gsap.to(gsap_item3,{ 
+  y : 1000, 
+  scrollTrigger: {
+  trigger: work, // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+  start: "10% 50%", // 애니메이션 시작시점
+  end:"bottom top", // 애니메이션 종료시점
+  scrub: 4,
+  markers: true 
+}}
+)
+

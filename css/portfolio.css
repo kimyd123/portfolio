@@ -190,12 +190,22 @@ a {
     border: 1px solid red;
 }
 
-#work .roket{
+#work .roket:nth-child(1){
     position: absolute;
+    border: 1px solid red;
     width: 30%;
     left: 0;
     top: 0;
-    transform:rotate(80deg);
+    transform:rotate(145deg);
+    opacity: 0.2;
+}
+#work .roket:nth-child(2){
+    position: absolute;
+    border: 1px solid red;
+    width: 20%;
+    left: 70%;
+    top: 0;
+    transform:rotate(145deg);
     opacity: 0.2;
 }
 
@@ -469,5 +479,5 @@ a {
 
 
 .gsap_item2{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
