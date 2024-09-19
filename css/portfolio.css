@@ -76,17 +76,21 @@ a {
 #header .header_gnb li {
     margin: 0 10px;
     position: relative;
+
+}
+#header .header_gnb li a{
+    padding: 8px 10px;
 }
 
 #header .header_gnb li::before{
-    content: '';
+    /* content: '';
     background-size: 10px;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 50%;
-    /* background: #315078; */
+    height: 100%;
+    background: #315078; */
 }
 
 #header .header_gnb li:hover a{
@@ -108,15 +112,61 @@ a {
     z-index: 0; /* 다른 콘텐츠 위로 오지 않도록 뒤로 배치 */
 }
 
+#visual{
+    position: relative;
+}
+
+#visual::before{
+    content: '';
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #1d1d1d00, #1D1D1D);
+    z-index: 100;
+}
+
+#visual .visual_bg{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#visual .visual_bg[src="./image/v_main.svg"]{
+    left: 45%;
+    width: 45%;
+    animation: translate 5s ease-in-out infinite alternate;
+}
+
+
+
+
+@keyframes translate {
+    0%{
+        transform: translateY(-50px);
+    }100%{
+        transform: translateY(0px);
+    }
+}
+
+
 
 #visual .inner {
     margin: 0 auto;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
 }
 
 #visual .visual_title {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+    position: relative;
+    z-index: 1;
 }
 
 #visual .title {
@@ -126,7 +176,7 @@ a {
 #visual .title_content {
     font-size: 12px;
     margin: 0 10% 0 0;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     /* 쿼리작업때     align-self : flex-start;*/
     line-height: 32px;
 }
@@ -136,8 +186,16 @@ a {
 }
 
 #work{
+    position: relative;
+}
 
-
+#work .roket{
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 0;
+    transform:rotate(80deg);
+    opacity: 0.5;
 }
 
 
@@ -151,7 +209,7 @@ a {
     display: inline-block;
     font-size: 96px;
     text-align: left;
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 #work .work_content_fig {
@@ -229,25 +287,61 @@ a {
 
 #about {
     position: relative;
+    height: 100vh;
+    margin-top: 40px ;
 }
+
+#about .about_bg{
+    position: absolute;
+    animation: scale 2s ease-in-out infinite alternate;
+    z-index: 0;
+
+}
+
+#about .about_bg:nth-child(1){
+    width: 60%;
+    left: -15%;
+    top: 60%;
+    opacity: 0.9;
+}
+#about .about_bg:nth-child(2){
+    width: 25%;
+    left: 30%;
+    top: 30%;
+    opacity: 0.5;
+}
+#about .about_bg:nth-child(3){
+    width: 25%;
+    left: 65%;
+    top: 0%;
+    opacity: 0.3;
+}
+
+
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }100%{
+        transform: scale(1.05);
+    }
+}
+
+
+
 #about .inner {
     margin: 0 auto;
-    /* border: 1px solid red; */
+    position: relative;
+    z-index: 100;
+
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /* position: relative; */
+    /* z-index: 100; */
 }
 
-#about .about_keyword{
-    position: absolute;
-    max-width: 30%;
-    min-width: 500px;
-    right: 10%;
-    top: 110%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 
-}
 
 #about .about_keyword .keyword{
     display: inline-block;
@@ -269,27 +363,33 @@ a {
     font-size: 96px;
     width: 35%;
     margin: 40px 50px 0 0;
-    /* border: 1px solid red; */
     align-self: flex-end;
 }
 
 #about .about_content {
-    /* border: 1px solid red; */
     white-space: nowrap;
     width: 50%;
     margin: 0 0 0 10%;
     line-height: 32px;
 }
 
+#about .about_keyword{
+    align-self: flex-end;
+    max-width: 30%;
+    min-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 #about .about_skills_box {
     width: 0;
     height: 200px;
-    padding: 30px;
     border-radius: 0 30px 30px 0;
     background-color: var(--auxiliary-color1);
     position: absolute;
-    left: 0;
-    bottom: -110%;
+    bottom: -40%;
+    left: -21%;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -297,7 +397,8 @@ a {
 }
 
 #about .about_skills_box.animated_skill_box{
-    width: 50%;
+    width: 80%;
+    padding: 30px;
 }
 
 .skills_list img{
@@ -322,7 +423,7 @@ a {
     background-repeat: no-repeat;
     background-position: 15% top;
     background-size: contain;
-    margin-top: 700px;
+    margin-top: 450px;
 }
 
 #contect .inner {
@@ -334,6 +435,7 @@ a {
     font-size: 96px;
     text-align: center;
     margin: 100px 0;
+    padding-top: 45px;
 }
 
 #contect .contect_content {
