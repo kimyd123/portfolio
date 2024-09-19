@@ -136,19 +136,19 @@ a {
 #visual .visual_bg[src="./image/v_main.svg"]{
     left: 45%;
     width: 45%;
-    animation: translate 5s ease-in-out infinite alternate;
+}
+
+#visual .visual_bg:nth-child(4){
+    bottom: -40px;
+}
+
+
+#visual .visual_bg:nth-child(4){
+    transform: scale;
 }
 
 
 
-
-@keyframes translate {
-    0%{
-        transform: translateY(-50px);
-    }100%{
-        transform: translateY(0px);
-    }
-}
 
 
 
@@ -187,6 +187,7 @@ a {
 
 #work{
     position: relative;
+    border: 1px solid red;
 }
 
 #work .roket{
@@ -195,7 +196,7 @@ a {
     left: 0;
     top: 0;
     transform:rotate(80deg);
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 
@@ -301,21 +302,33 @@ a {
 #about .about_bg:nth-child(1){
     width: 60%;
     left: -15%;
+    z-index: 10;
     top: 60%;
-    opacity: 0.9;
+    opacity: 1;
 }
 #about .about_bg:nth-child(2){
-    width: 25%;
-    left: 30%;
-    top: 30%;
-    opacity: 0.5;
+    width: 30%;
+    left: 22%;
+    z-index: 9;
+    top: 40%;
+    opacity: 0.8;
 }
 #about .about_bg:nth-child(3){
-    width: 25%;
-    left: 65%;
-    top: 0%;
-    opacity: 0.3;
+    width: 15%;
+    left: 53%;
+    z-index: 8;
+    top: 19%;
+    opacity: 0.6;
 }
+#about .about_bg:nth-child(4){
+    width: 10%;
+    left: 75%;
+    z-index: 7;
+    top: 5%;
+    opacity: 0.4;
+}
+
+
 
 
 @keyframes scale {
@@ -389,7 +402,8 @@ a {
     background-color: var(--auxiliary-color1);
     position: absolute;
     bottom: -40%;
-    left: -21%;
+    left: 0;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -397,7 +411,7 @@ a {
 }
 
 #about .about_skills_box.animated_skill_box{
-    width: 80%;
+    width: 50%;
     padding: 30px;
 }
 
@@ -409,7 +423,7 @@ a {
 
 
 .about_skills_box_inner {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -451,4 +465,9 @@ a {
     text-align: center;
     margin: 0 auto;
     padding: 30px;
+}
+
+
+.gsap_item2{
+    border: 1px solid red;
 }
