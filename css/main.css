@@ -1,0 +1,21 @@
+@import url(./reset.css);
+@import url(./header.css);
+@import url(./visual.css);
+@import url(./work.css);
+@import url(./about.css);
+@import url(./contect.css);
+@import url(./footer.css);
+
+
+/* gsap */
+
+
+
+.gsap_item3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+    opacity: 0.3;
+    transform: rotate(-267deg);
+}

@@ -1,0 +1,47 @@
+:root{
+    --bg-color : #1D1D1D;
+    --font-color: #c7c7c7;
+    --main-color: #e8176b;
+    --auxiliary-color1 : #315078;
+}
+
+.Point_color{
+    color: var(--main-color);
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*초기화*/
+body,
+html {
+    font-family: 'Pretendard-Regular', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-size: 18px;
+}
+
+body{
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.inner {
+    width: 70%;
+    /* border: 1px solid red; */
+}

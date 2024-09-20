@@ -1,0 +1,237 @@
+#work {
+    position: relative;
+}
+
+#work .inner {
+    margin: 0 auto;
+}
+
+#work .work_title {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-size: 96px;
+    text-align: left;
+    margin-top: 41px;
+}
+
+#work .work_content_fig {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s ease-in-out;
+}
+
+#work .work_content_fig.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+#work .work_content_fig figure span {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#work .work_img {
+    width: 60%;
+    position: relative;
+    filter : grayscale(80%);
+    transition: all 0.3s ease-in-out;
+}
+
+#work .work_img img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#work .work_content_fig:nth-child(1) {
+    margin-top: 0;
+}
+#work .before_hover {
+    display: inline-block;
+    width: 100%;
+}
+#work .before_hover:before {
+    content: 'VIEW SITE';
+    white-space: nowrap;
+    padding: 8px 50px;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    opacity: 0;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: all 0.3s ease-in-out;
+}
+
+#work .work_content_fig:hover .before_hover:before {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#work .work_content_fig:hover .work_img {
+    filter : grayscale(0)
+}
+
+#work .work_content_fig:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+
+    #work .inner {
+        width: 90%;
+    }
+    
+    #work .work_title {
+        font-size: 72px;
+    }
+    
+    #work .work_content_fig.animated {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    #work .work_content_fig figure span {
+        font-size: 28px;
+    }
+    
+    #work .work_img {
+        width: 50%;
+    }
+    
+    #work .work_content_fig:nth-child(1) {
+        margin-top: 0;
+    }
+    #work .before_hover {
+        display: inline-block;
+        width: 100%;
+    }
+    #work .before_hover:before {
+        content: 'VIEW SITE';
+        white-space: nowrap;
+        padding: 8px 50px;
+        font-size: 18px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: var(--bg-color);
+        border-radius: 20px;
+        opacity: 0;
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #work .work_content_fig:hover .before_hover:before {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    
+    #work .work_content_fig:hover .work_img {
+        filter : grayscale(0)
+    }
+    
+    #work .work_content_fig:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    
+
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width:767px) {
+
+    #work .inner {
+        width: 80%;
+    }
+    
+    #work .work_title {
+        font-size: 58px;
+    }
+    
+    #work .work_content_fig {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #work .work_content_fig:nth-child(even),
+    #work .work_content_fig:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+    
+    
+    #work .work_img {
+        width: 100%;
+        position: relative;
+        filter : grayscale(80%);
+        transition: all 0.3s ease-in-out;
+    }
+    #work .work_content_fig figure {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    
+    
+    #work .work_img img {
+        width: 100%;
+        height: 150px;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center top;
+    }
+    
+    #work .work_content_fig:nth-child(1) {
+        margin-top: 0;
+    }
+    #work .before_hover {
+        display: inline-block;
+        width: 100%;
+    }
+    #work .before_hover:before {
+        content: 'VIEW SITE';
+        white-space: nowrap;
+        padding: 8px 50px;
+        font-size: 18px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: var(--bg-color);
+        border-radius: 20px;
+        opacity: 0;
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #work .work_content_fig:hover .before_hover:before {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    
+    #work .work_content_fig:hover .work_img {
+        filter : grayscale(0)
+    }
+    
+
+}

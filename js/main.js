@@ -102,33 +102,53 @@ t2.to(".gsap_item2", {
 });
 
 
+const t3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#work', 
+    start: "top 80%", 
+    end: "bottom top",
+    scrub : 5,         
+    markers: false       
+  }
+});
+
+t3.to(".gsap_item3", {
+  x: '1200px',
+  y: '1000px',  
+});
+
+
 //가로 스크롤
 //matchMedia 반응형
 
 gsap.registerPlugin(ScrollTrigger);
 
-const li = document.querySelectorAll('.about_skills li');
+const li1 = document.querySelectorAll('.about_skills1 li');
+const li2 = document.querySelectorAll('.about_skills2 li');
+
 
 ScrollTrigger.matchMedia({
-  '(min-width : 500px)' : function(){
+  '(min-width : 300px)' : function(){
     // 트리거 작성
-    let list = gsap.utils.toArray(li);
-
-    gsap.to(list, {
-      xPercent: -100 * (list.length - 1),  // 가로 스크롤 공식
+    let list1 = gsap.utils.toArray(li1);
+    gsap.to(list1, {
+      xPercent: -100 * (list1.length - 1),
       ease: 'none',
       scrollTrigger: {
         trigger: '.about_skills',
-        pin: true,            // 스크롤 중 요소 고정
+        pin: true,            
         pinSpacing: true,
-        scrub: 1,             // 스크롤에 따라 애니메이션 진행
-        start: 'center center',     // 시작 지점 설정 (뷰포트 상단)
-        end: '300%',        // 종료 시점 설정
-        markers: true         // 디버그용 마커
+        scrub: 1,             
+        start: 'center center',     
+        end: '300%',        
+        markers: false        
       }
     });
   }
 });
+
+
+
 
 
 
