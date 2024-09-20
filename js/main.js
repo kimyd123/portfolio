@@ -80,7 +80,7 @@ gsap.to(".gsap_item1", {
 const t2 = gsap.timeline({
   scrollTrigger: {
     trigger: '#about',  // 스크롤 트리거 요소
-    start: "top 40%",    // 시작 시점
+    start: "top 50%",    // 시작 시점
     end: "bottom top",   // 종료 시점
     scrub: 2,            // 스크롤에 맞춰 부드럽게 진행
     markers: false       // 디버깅 마커 표시 여부
@@ -95,7 +95,7 @@ gsap.to(".gsap_item2", {
 });
 
 t2.to(".gsap_item2", {
-  // x: '100%',
+  x: '100',
   scale : 2,
   opacity : 0,
   scrub: 4,  
