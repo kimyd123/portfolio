@@ -131,25 +131,12 @@ a {
     width: 100%;
     position: absolute;
     bottom: 0;
-    left: 0;
 }
-#visual .visual_bg[src="./image/v_main.svg"]{
-    left: 45%;
-    width: 45%;
-}
+
 
 #visual .visual_bg:nth-child(4){
     bottom: -40px;
 }
-
-
-#visual .visual_bg:nth-child(4){
-    transform: scale;
-}
-
-
-
-
 
 
 #visual .inner {
@@ -187,27 +174,18 @@ a {
 
 #work{
     position: relative;
-    border: 1px solid red;
 }
 
-#work .roket:nth-child(1){
+.roket{
     position: absolute;
-    border: 1px solid red;
-    width: 30%;
-    left: 0;
-    top: 0;
-    transform:rotate(145deg);
-    opacity: 0.2;
-}
-#work .roket:nth-child(2){
-    position: absolute;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 20%;
-    left: 70%;
-    top: 0;
-    transform:rotate(145deg);
-    opacity: 0.2;
+    left: 0;
+    bottom: 0;
+    transform:rotate(53deg);
+    opacity: 0.5;
 }
+
 
 
 #work .inner {
@@ -220,7 +198,7 @@ a {
     display: inline-block;
     font-size: 96px;
     text-align: left;
-    margin-top: 0px;
+    margin-top: 41px;
 }
 
 #work .work_content_fig {
@@ -298,55 +276,38 @@ a {
 
 #about {
     position: relative;
-    height: 100vh;
-    margin-top: 40px ;
+    margin-top: 100px ;
 }
 
-#about .about_bg{
+#work .about_bg{
     position: absolute;
     animation: scale 2s ease-in-out infinite alternate;
     z-index: 0;
-
 }
 
-#about .about_bg:nth-child(1){
-    width: 60%;
-    left: -15%;
-    z-index: 10;
-    top: 60%;
+#work .about_bg:nth-child(1){
+    width: 20%;
+    right: 10%;
+    top: 10%;
     opacity: 1;
 }
-#about .about_bg:nth-child(2){
-    width: 30%;
-    left: 22%;
-    z-index: 9;
-    top: 40%;
+#work .about_bg:nth-child(2){
+    width: 20%;
+    left: 10%;
+    top: 30%;
     opacity: 0.8;
 }
-#about .about_bg:nth-child(3){
-    width: 15%;
-    left: 53%;
-    z-index: 8;
-    top: 19%;
-    opacity: 0.6;
+#work .about_bg:nth-child(3){
+    width: 20%;
+    right: 10%;
+    top: 50%;
+    opacity: 0.8;
 }
-#about .about_bg:nth-child(4){
-    width: 10%;
-    left: 75%;
-    z-index: 7;
-    top: 5%;
-    opacity: 0.4;
-}
-
-
-
-
-@keyframes scale {
-    0%{
-        transform: scale(1);
-    }100%{
-        transform: scale(1.05);
-    }
+#work .about_bg:nth-child(4){
+    width: 20%;
+    left: 10%;
+    top: 70%;
+    opacity: 1;
 }
 
 
@@ -355,13 +316,15 @@ a {
     margin: 0 auto;
     position: relative;
     z-index: 100;
-
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* position: relative; */
     /* z-index: 100; */
+}
+#about .about_keyword{
+    width: 50%;
 }
 
 
@@ -405,69 +368,122 @@ a {
     gap: 10px;
 }
 
-#about .about_skills_box {
-    width: 0;
-    height: 200px;
-    border-radius: 0 30px 30px 0;
-    background-color: var(--auxiliary-color1);
-    position: absolute;
-    bottom: -40%;
-    left: 0;
-    z-index: 10;
+#about .about_resume{
+    min-width: 500px;
+    align-self: flex-end;
+    margin-top: 10px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    border: 2px solid var(--font-color);
+    background: #1d1d1d00;
+    color: var(--font-color);
+}
+
+#about .resume{
     display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
-#about .about_skills_box.animated_skill_box{
-    width: 50%;
-    padding: 30px;
+#about 
+
+#about .resume li {
+
 }
 
-.skills_list img{
+.about_skills{
+    display: flex;
+    padding: 3% 30%;
+    box-sizing: border-box;
+} 
+
+.about_skills li{
+    width: 500px;
+    padding: 100px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.about_skills li a{
+    display: block;
     width: 100%;
-    object-fit: cover;
-    
+    position: relative;
 }
 
-
-.about_skills_box_inner {
-    /* border: 1px solid red; */
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
+.about_skills a .imgBox{
+    position: relative;
 }
 
+.about_skills a .imgBox img{
+    width: 100%;
+}
+
+.about_skills a .textBox{
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.336);
+}
+
+.about_skills a .textBox .title {
+    font-size: 60px;
+}
+
+.about_skills a .textBox .text {
+    font-size: 20px;
+    padding-left: 5px;
+}
 
 
 #contect {
-    height: 100vh;
     background-image: url(../image/bg1.svg);
     background-repeat: no-repeat;
-    background-position: 15% top;
+    background-position: 20%;
     background-size: contain;
-    margin-top: 450px;
+
 }
 
 #contect .inner {
-    /* border: 1px solid red; */
     margin: 0 auto 0;
 }
 
 #contect .contect_title {
     font-size: 96px;
     text-align: center;
-    margin: 100px 0;
-    padding-top: 45px;
+    margin: 100px 0 50px 0;
 }
+
+#contect .contect_wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    /* border: 1px solid red; */
+
+}
+
 
 #contect .contect_content {
-
     font-size: 62px;
-    margin-left: 5%;
+    margin: 0;
+    /* border: 1px solid red; */
 }
 
+#contect .contect_box {
+    white-space: nowrap;
+    line-height: 108px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+#contect .contect_box ul {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+}
+#contect .contect_box ul li{
+    width: 30%;
+}
 
 
 
@@ -478,6 +494,18 @@ a {
 }
 
 
+/*gsap*/
+
+#visual .gsap_item1{
+    width: 35%;
+    right: 15%;
+    bottom: 35%;
+}
+
 .gsap_item2{
-    /* border: 1px solid red; */
+    position: absolute;
+    left: -20%;
+    top: -25%;
+    width: 60%;
+    opacity: 0.2;
 }
