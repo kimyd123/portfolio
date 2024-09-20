@@ -113,7 +113,6 @@ const t3 = gsap.timeline({
 });
 
 t3.to(".gsap_item3", {
-  x: '1200px',
   y: '1000px',  
 });
 

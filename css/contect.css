@@ -20,14 +20,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    /* border: 1px solid red; */
 
 }
 
 #contect .contect_content {
     font-size: 62px;
     margin: 0;
-    /* border: 1px solid red; */
 }
 
 #contect .contect_box {
@@ -35,7 +33,6 @@
     line-height: 108px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
 }
 #contect .contect_box ul {
     display: flex;
