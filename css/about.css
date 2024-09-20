@@ -54,7 +54,7 @@
 #about .about_content {
     white-space: nowrap;
     width: 50%;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 0;
     line-height: 32px;
 }
 

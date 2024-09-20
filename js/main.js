@@ -17,23 +17,6 @@
           io.observe(el);
           });
 
-  // 스킬박스 요소 화면에 보일때 좌에서 우로
-    
-      const io_skillbox = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.intersectionRatio > 0) {
-              entry.target.classList.add('animated_skill_box');
-              console.log('등장');
-            }else{
-              entry.target.classList.remove('animated_skill_box');
-              console.log('퇴장');
-            }	
-          })
-        },{ threshold:[0, 0.8]});
-
-      // const about_skills_box = document.querySelector('.about_skills_box');
-      // io_skillbox.observe(about_skills_box);
-
 
       //내비게이션바 휠 아리로할때 위로 숨겨짐
       const nav = document.querySelector('#header');
@@ -50,101 +33,100 @@
 
 
 
+        //트리거
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top 10%",   
+            end: "bottom top",   
+            scrub: 2,            
+            markers: false     
+          }
+        });
+
+        tl.to(".gsap_item1", {
+          y: 500, 
+        });
 
 
-
-//트리거
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#visual',  // 스크롤 트리거 요소
-    start: "top 10%",    // 시작 시점
-    end: "bottom top",   // 종료 시점
-    scrub: 2,            // 스크롤에 맞춰 부드럽게 진행
-    markers: false       // 디버깅 마커 표시 여부
-  }
-});
-
-tl.to(".gsap_item1", {
-  y: 500,  // y축으로 500px 이동
-});
-
-// 별도로 무한 반복 애니메이션 정의 (scrollTrigger와 무관)
-gsap.to(".gsap_item1", {
-  scale: 1.03,               // y축으로 10px 이동
-  duration: 2,         // 2초 동안 애니메이션
-  repeat: -1,          // 무한 반복
-  yoyo: true           // 처음 상태로 되돌아가는 애니메이션
-});
+        gsap.to(".gsap_item1", {
+          scale: 1.03,               
+          duration: 2,       
+          repeat: -1,          
+          yoyo: true           
+        });
 
 
-const t2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#about',  // 스크롤 트리거 요소
-    start: "top 50%",    // 시작 시점
-    end: "bottom top",   // 종료 시점
-    scrub: 2,            // 스크롤에 맞춰 부드럽게 진행
-    markers: false       // 디버깅 마커 표시 여부
-  }
-});
+        const t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#about',  // 스크롤 트리거 요소
+            start: "top 50%",    // 시작 시점
+            end: "bottom top",   // 종료 시점
+            scrub: 2,            // 스크롤에 맞춰 부드럽게 진행
+            markers: false       // 디버깅 마커 표시 여부
+          }
+        });
 
-gsap.to(".gsap_item2", {
-  rotate : 360,               // y축으로 10px 이동
-  duration: 500,         // 2초 동안 애니메이션
-  repeat: -1,          // 무한 반복
-  yoyo: true           // 처음 상태로 되돌아가는 애니메이션
-});
+        gsap.to(".gsap_item2", {
+          rotate : 360,               // y축으로 10px 이동
+          duration: 500,         // 2초 동안 애니메이션
+          repeat: -1,          // 무한 반복
+          yoyo: true           // 처음 상태로 되돌아가는 애니메이션
+        });
 
-t2.to(".gsap_item2", {
-  x: '100',
-  scale : 2,
-  opacity : 0,
-  scrub: 4,  
-});
-
-
-const t3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#work', 
-    start: "top 80%", 
-    end: "bottom top",
-    scrub : 5,         
-    markers: false       
-  }
-});
-
-t3.to(".gsap_item3", {
-  y: '1000px',  
-});
+        t2.to(".gsap_item2", {
+          x: '100',
+          scale : 2,
+          opacity : 0,
+          scrub: 4,  
+        });
 
 
-//가로 스크롤
-//matchMedia 반응형
+        const t3 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#work', 
+            start: "top 80%", 
+            end: "bottom top",
+            scrub : 5,         
+            markers: false       
+          }
+        });
 
-gsap.registerPlugin(ScrollTrigger);
+        t3.to(".gsap_item3", {
+          scale : 2,
+          x : '100%',
+          y: 1000
+        });
 
-const li1 = document.querySelectorAll('.about_skills1 li');
-const li2 = document.querySelectorAll('.about_skills2 li');
+
+        //가로 스크롤
+        //matchMedia 반응형
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const li1 = document.querySelectorAll('.about_skills1 li');
+        const li2 = document.querySelectorAll('.about_skills2 li');
 
 
-ScrollTrigger.matchMedia({
-  '(min-width : 300px)' : function(){
-    // 트리거 작성
-    let list1 = gsap.utils.toArray(li1);
-    gsap.to(list1, {
-      xPercent: -100 * (list1.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.about_skills',
-        pin: true,            
-        pinSpacing: true,
-        scrub: 1,             
-        start: 'center center',     
-        end: '300%',        
-        markers: false        
-      }
-    });
-  }
-});
+        ScrollTrigger.matchMedia({
+          '(min-width : 300px)' : function(){
+            // 트리거 작성
+            let list1 = gsap.utils.toArray(li1);
+            gsap.to(list1, {
+              xPercent: -100 * (list1.length - 1),
+              ease: 'none',
+              scrollTrigger: {
+                trigger: '.about_skills',
+                pin: true,            
+                pinSpacing: true,
+                scrub: 1,             
+                start: 'center center',     
+                end: '300%',        
+                markers: false        
+              }
+            });
+          }
+        });
 
 
 
