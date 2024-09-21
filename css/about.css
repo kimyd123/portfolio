@@ -40,8 +40,9 @@
     white-space: nowrap;
 }
 #about .about_keyword .keyword:hover {
-    border: 2px solid var(--auxiliary-color1);
+    border: 2px solid var(--main-color);
     color: white;
+    cursor: pointer;
 }
 
 #about .about_title {

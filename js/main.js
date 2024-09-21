@@ -79,7 +79,7 @@
             start: "top top",   
             end: "bottom top",
             scrub: 2,              
-            markers: true     
+            markers: false     
           }
         });
         tl_4.to(".gsap_item11", {
@@ -93,7 +93,7 @@
             start: "top top",   
             end: "bottom top",
             scrub: 1,              
-            markers: true     
+            markers: false     
           }
         });
         tl_5.to(".gsap_item10", {
@@ -105,8 +105,8 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 1,              
-            markers: true     
+            scrub: 2,              
+            markers: false     
           }
         });
         tl_6.to(".gsap_item7", {
@@ -118,8 +118,8 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 2,             
-            markers: true     
+            scrub: 3,             
+            markers: false     
           }
         });
         tl_7.to(".gsap_item8", {
@@ -131,11 +131,24 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 2,         
-            markers: true     
+            scrub: 1,         
+            markers: false     
           }
         });
         tl_8.to(".gsap_item9", {
+          y :500
+        });
+
+        const tl_9 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 2,         
+            markers: false     
+          }
+        });
+        tl_9.to(".gsap_item12", {
           y :500
         });
 

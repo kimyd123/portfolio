@@ -20,50 +20,50 @@
     bottom: 0;
 }
 
-#visual .visual_man{
+#visual .visual_man {
     left: 50%;
     transform: translateX(-50%);
 }
 
-.visual_planet{
+.visual_planet {
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
+    filter: saturate(65%);
 }
 
-
-.planet2{
-    left: 30%; 
+.planet2 {
+    left: 30%;
     top: 56%;
 }
-.planet3{
-    left: 70%; 
+.planet3 {
+    left: 70%;
     top: 30%;
 }
 
-.visual_text_title{
+.visual_text_title {
     font-size: 52px;
 }
 
 .visual_text_title h2 {
     margin: 0;
 }
-.visual_text_title span{
+.visual_text_title span {
     display: block;
 }
-.visual_text{
+.visual_text {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.visual_text span{
+.visual_text span {
     display: block;
 }
 
-.visual_text .visual_text1{
+.visual_text .visual_text1 {
     font-size: 14px;
 }
 
@@ -71,36 +71,162 @@
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-/* #visual::before {
-    content: '';
-    width: 100%;
-    height: 20%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, #1d1d1d00, #1D1D1D);
-    z-index: 100;
-} */
-
-
-
-
-
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1023px) {
-    
+    #visual {
+        position: relative;
+        height: 100vh;
+    }
+    #visual .inner {
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 10px black;
+    }
+
+    #visual .visual_under_bg {
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+    }
+
+    #visual .visual_man {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #visual .visual_planet {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        filter: saturate(65%);
+    }
+    #visual .planet1 {
+        width: 50%;
+        top: 30%;
+    }
+    #visual .planet2 {
+        width: 15%;
+        left: 30%;
+        top: 56%;
+    }
+    #visual .planet3 {
+        width: 15%;
+        left: 70%;
+        top: 30%;
+    }
+
+    #visual .visual_text_title {
+        font-size: 48px;
+    }
+
+    #visual .visual_text_title h2 {
+        margin: 0;
+    }
+    #visual .visual_text_title span {
+        display: block;
+    }
+    #visual .visual_text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #visual .visual_text span {
+        display: block;
+    }
+
+    #visual .visual_text .visual_text1 {
+        font-size: 14px;
+    }
+
+    #visual .visual_text p {
+        margin: 0;
+    }
 
 }
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
+    #visual {
+        position: relative;
+        height: 100vh;
+    }
+    #visual .inner {
+        width: 95%;
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 10px black;
+    }
 
-}
+    #visual .visual_under_bg {
+        position: absolute;
+        left: 0;
+        bottom: -13%;
+    }
+    #visual .visual_man {
+        width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #visual .visual_planet {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        filter: saturate(65%);
+    }
+    #visual .planet1 {
+        width: 50%;
+        top: 30%;
+    }
+    #visual .planet2 {
+        width: 15%;
+        left: 30%;
+        top: 56%;
+    }
+    #visual .planet3 {
+        width: 15%;
+        left: 70%;
+        top: 30%;
+    }
+
+    #visual .visual_text_title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    #visual .visual_text_title h2 {
+        margin: 0;
+    }
+    #visual .visual_text_title span {
+        display: block;
+    }
+    #visual .visual_text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #visual .visual_text span {
+        display: block;
+    }
+
+    #visual .visual_text .visual_text1 {
+        font-size: 12px;
+        margin-right: 9px;
+    }
+
+    #visual .visual_text p {
+        margin: 0;
+    }
+
+    }
