@@ -34,23 +34,119 @@
 
 
         //트리거
-        const tl = gsap.timeline({
+        const tl_1 = gsap.timeline({
           scrollTrigger: {
             trigger: '#visual',  
-            start: "top 10%",   
-            end: "bottom top",   
-            scrub: 2,            
+            start: "5% top",   
+            end: "bottom top",
+            scrub: 2,              
             markers: false     
           }
         });
+        tl_1.to(".gsap_item4", {
+          y: -500,
+        });
 
-        tl.to(".gsap_item1", {
-          y: 500, 
+        const tl_2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 3,              
+            markers: false     
+          }
+        });
+        tl_2.to(".gsap_item5", {
+          y: -500, 
+        });
+
+        const tl_3 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 5,              
+            markers: false     
+          }
+        });
+        tl_3.to(".gsap_item6", {
+          y: -500, 
+        });
+
+        const tl_4 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 2,              
+            markers: true     
+          }
+        });
+        tl_4.to(".gsap_item11", {
+          opacity : 0,
+          y :500
+        });
+
+        const tl_5 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 1,              
+            markers: true     
+          }
+        });
+        tl_5.to(".gsap_item10", {
+          y :200
+        });
+        
+        const tl_6 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 1,              
+            markers: true     
+          }
+        });
+        tl_6.to(".gsap_item7", {
+          y :400
+        });
+
+        const tl_7 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 2,             
+            markers: true     
+          }
+        });
+        tl_7.to(".gsap_item8", {
+          y :500
+        });
+
+        const tl_8 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#visual',  
+            start: "top top",   
+            end: "bottom top",
+            scrub: 2,         
+            markers: true     
+          }
+        });
+        tl_8.to(".gsap_item9", {
+          y :500
         });
 
 
-        gsap.to(".gsap_item1", {
-          scale: 1.03,               
+
+
+
+
+
+        gsap.to(".gsap_item4", {
+          scale: 1.02,      
           duration: 2,       
           repeat: -1,          
           yoyo: true           
@@ -69,7 +165,7 @@
 
         gsap.to(".gsap_item2", {
           rotate : 360,               // y축으로 10px 이동
-          duration: 500,         // 2초 동안 애니메이션
+          duration: 100,         // 2초 동안 애니메이션
           repeat: -1,          // 무한 반복
           yoyo: true           // 처음 상태로 되돌아가는 애니메이션
         });

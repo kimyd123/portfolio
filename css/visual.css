@@ -20,15 +20,30 @@
     bottom: 0;
 }
 
-.visual_moon{
+#visual .visual_man{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.visual_planet{
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 40%;
     transform: translate(-50%, -50%);
 }
 
+
+.planet2{
+    left: 30%; 
+    top: 56%;
+}
+.planet3{
+    left: 70%; 
+    top: 30%;
+}
+
 .visual_text_title{
-    font-size: 62px;
+    font-size: 52px;
 }
 
 .visual_text_title h2 {
@@ -49,10 +64,7 @@
 }
 
 .visual_text .visual_text1{
-    font-size: 13px;
-}
-.visual_text .visual_text1{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .visual_text p {
