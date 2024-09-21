@@ -46,6 +46,15 @@
         tl_1.to(".gsap_item4", {
           y: -500,
         });
+        gsap.to('.gsap_item4',{
+          rotate : 360,
+          x: -200,            // y축으로 10px 이동
+          duration: 200,         // 2초 동안 애니메이션
+          repeat: -1,          // 무한 반복
+          yoyo: true           // 처음 상태로 되돌아가는 애니메이션
+        })
+
+        
 
         const tl_2 = gsap.timeline({
           scrollTrigger: {
@@ -59,6 +68,12 @@
         tl_2.to(".gsap_item5", {
           y: -500, 
         });
+        gsap.to('.gsap_item5',{
+          rotate : -360,            // y축으로 10px 이동
+          duration: 300,         // 2초 동안 애니메이션
+          repeat: -1,          // 무한 반복
+          yoyo: true           // 처음 상태로 되돌아가는 애니메이션
+        })
 
         const tl_3 = gsap.timeline({
           scrollTrigger: {
@@ -72,6 +87,14 @@
         tl_3.to(".gsap_item6", {
           y: -500, 
         });
+        gsap.to('.gsap_item6',{
+          rotate : -360,
+          x: 200,            // y축으로 10px 이동
+          duration: 300,         // 2초 동안 애니메이션
+          repeat: -1,          // 무한 반복
+          yoyo: true           // 처음 상태로 되돌아가는 애니메이션
+        })
+
 
         const tl_4 = gsap.timeline({
           scrollTrigger: {
@@ -203,6 +226,7 @@
 
         t3.to(".gsap_item3", {
           scale : 2,
+          opacity : 0.2,
           x : '100%',
           y: 1000
         });
