@@ -4,10 +4,8 @@
           entries.forEach(entry => {
             if (entry.intersectionRatio > 0) {
               entry.target.classList.add('animated');
-              console.log('ddasdasdad');
             }else{
               entry.target.classList.remove('animated');
-              console.log('ddasdasdad');
             }	
           })
         },{ threshold:[0, 0.6]});
@@ -21,14 +19,19 @@
       //내비게이션바 휠 아리로할때 위로 숨겨짐
       const nav = document.querySelector('#header');
       const header_gnb = document.querySelector('.header_gnb');
+
+
+
       
       window.addEventListener('wheel', function(e){
         if(e.deltaY > 0){
           nav.classList.add('stiky');
+            console.log(e.deltaY);
         }else{
+          console.log(e.deltaY);
+
           nav.classList.remove('stiky');
         }
-        console.log(e.deltaY);
       });
 
 
@@ -176,11 +179,6 @@
         });
 
 
-
-
-
-
-
         gsap.to(".gsap_item4", {
           scale: 1.02,      
           duration: 2,       
@@ -194,7 +192,7 @@
             trigger: '#about',  // 스크롤 트리거 요소
             start: "top 50%",    // 시작 시점
             end: "bottom top",   // 종료 시점
-            scrub: 2,            // 스크롤에 맞춰 부드럽게 진행
+            scrub: 1,            // 스크롤에 맞춰 부드럽게 진행
             markers: false       // 디버깅 마커 표시 여부
           }
         });
@@ -210,7 +208,7 @@
           x: '100',
           scale : 2,
           opacity : 0,
-          scrub: 4,  
+          scrub: 1,  
         });
 
 
@@ -219,7 +217,7 @@
             trigger: '#work', 
             start: "top 80%", 
             end: "bottom top",
-            scrub : 5,         
+            scrub : 1,         
             markers: false       
           }
         });
@@ -238,7 +236,6 @@
         gsap.registerPlugin(ScrollTrigger);
 
         const li1 = document.querySelectorAll('.about_skills1 li');
-        const li2 = document.querySelectorAll('.about_skills2 li');
 
 
         ScrollTrigger.matchMedia({
@@ -254,13 +251,39 @@
                 pinSpacing: true,
                 scrub: 1,             
                 start: 'center center',     
-                end: '300%',        
+                end: '500%',        
                 markers: false        
               }
             });
           }
         });
 
+
+
+
+
+        const li2 = document.querySelectorAll('.resume');
+
+
+        ScrollTrigger.matchMedia({
+          '(min-width : 300px)' : function(){
+            // 트리거 작성
+            let list = gsap.utils.toArray(li2);
+            gsap.to(list, {
+              // opacity : 1,
+              // y:'50%',
+              scrollTrigger: {
+                trigger: '.resume_container',
+                pin: true,            
+                pinSpacing: true,
+                scrub: 1,             
+                start: 'center center',     
+                end: '200%',        
+                markers: false        
+              }
+            });
+          }
+        });
 
 
 
