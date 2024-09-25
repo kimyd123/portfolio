@@ -16,6 +16,32 @@
           });
 
 
+      //모달
+      const modals = document.querySelectorAll('.modal');
+
+
+      work_content_fig.forEach((el,i)=>{
+
+        el.addEventListener('click',(e)=>{
+          modals.forEach((el)=>{
+            el.classList.remove('modal_slide');
+            el.addEventListener('click',(e)=>{
+              const evTarget = e.target;
+              if (evTarget.classList.contains("modal")) {
+                modals[i].classList.remove('modal_slide');
+              }
+            });
+          });
+          modals[i].classList.toggle('modal_slide');
+        });
+      })
+
+
+
+
+
+
+
       //내비게이션바 휠 아리로할때 위로 숨겨짐
       const nav = document.querySelector('#header');
       const header_gnb = document.querySelector('.header_gnb');
@@ -298,9 +324,6 @@
           repeat: -1,          
           yoyo: true           
         });
-
-
-
 
 
 
