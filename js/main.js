@@ -259,32 +259,45 @@
         });
 
 
-
-
-
-        const li2 = document.querySelectorAll('.resume');
-
-
-        ScrollTrigger.matchMedia({
-          '(min-width : 300px)' : function(){
-            // 트리거 작성
-            let list = gsap.utils.toArray(li2);
-            gsap.to(list, {
-              // opacity : 1,
-              // y:'50%',
-              scrollTrigger: {
-                trigger: '.resume_container',
-                pin: true,            
-                pinSpacing: true,
-                scrub: 1,             
-                start: 'center center',     
-                end: '200%',        
-                markers: false        
-              }
-            });
-          }
+        const io2 = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              console.log('Triggered after scrolling down');
+              entry.target.classList.add('tranX');
+            } else {
+              entry.target.classList.remove('tranX');
+            }
+          });
+        }, {
+          threshold: 1, 
+        });
+        
+        const resume = document.querySelectorAll('.resume');
+        resume.forEach(el => {
+          io2.observe(el);
         });
 
+
+
+        gsap.from('.gsap_contectImg', {
+          rotate: 280,
+          x : -500,
+          duration: 3,   
+          scrollTrigger: {
+            trigger: '#contect',
+            scrub: 3,             
+            start: 'top center',     
+            end: '100% bottom',        
+            markers: false        
+          }
+        })
+        gsap.to(".gsap_contectImg", {
+          y:20,
+          scale: 1.02,      
+          duration: 2,       
+          repeat: -1,          
+          yoyo: true           
+        });
 
 
 

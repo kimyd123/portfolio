@@ -36,7 +36,7 @@
 }
 
 #header .header_gnb li:hover a {
-    color: white;
+    color: var(--main-color);
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/

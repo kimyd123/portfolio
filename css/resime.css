@@ -1,9 +1,11 @@
 .resume_container{
+    position: relative;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    border: 1px solid orange;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -14,61 +16,276 @@
     height: 100%;
     position: absolute;
     left: 0;
-    top: 30%;
+    top: 10%;
     font-size: 15rem;
     opacity: 0.03;
 }
 
-
-
 .resume_container .inner{
     width: 70%;
-    height: 100%;
+    height: 70%;
     margin: 0 auto;
-    display: flex;
-    position: relative;
-    align-items: center;
-    border: 1px solid red;
 }
 
-.resume_container .inner img {
-    width: 360px;
-    height: 360px;
-    object-fit: cover;
-    margin: 0 auto;
-    transition: all 0.3s ease-in-out;
+.resume_container .inner .resume_box{
+    width: 70%;
+    height: 80%;
+
+}
+
+.resume_container .inner .resume{
+    height: 15%;
+    position: relative;
+    border-bottom: 1px solid white;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(-100px);
+    opacity: 0;
+    
+}
+
+.resume_container .inner .resume.tranX{
+    transform: translateX(0);
     opacity: 1;
 }
 
-.resume {
+.resume_container .inner .resume::before{
+    content: '';
+    width: 100%;
+    height: 0;
     position: absolute;
-    border: 1px solid red;
-    top: 10%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
+    top: 0;
+    background-color: rgba(145, 145, 141, 0.438);
+    z-index: -1;
+    transition: all 0.2s;
 }
 
-.resume_container .resume:nth-child(2){
-    left: 10%;
-}
-.resume_container .resume:nth-child(3){
-    left: 30%;
-}
-.resume_container .resume:nth-child(4){
-    left: 50%;
-}
-.resume_container .resume:nth-child(5){
-    left: 70%;
-}
-.resume_container .resume:nth-child(6){
-    left: 90%;
+.resume_container .inner .resume:hover::before{
+    content: '';
+    height: 100%;
 }
 
-.resume_container .inner:hover img {
-    transform: scale(1.05);
+.resume_container .inner .resume:hover {
+    color: var(--main-color);
+    -webkit-text-stroke: 1px var(--main-color);
+}
+.resume_container .inner .resume h2{
+    font-size: 40px;
+    margin: 0;
+    margin-left: 100px;
+    vertical-align: middle;
+}
+
+
+.resume_container .inner .resume:nth-child(6){
+    border:none
+}
+.resume_container .inner .resume .resume_entire{
+    font-size: 18px;
+}
+
+
+
+
+
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .resume_container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .resume_container::before {
+        content: 'Resume';
+        white-space: nowrap;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 10%;
+        font-size: 15rem;
+        opacity: 0.03;
+    }
+    
+    .resume_container .inner{
+        width: 80%;
+        height: 70%;
+        margin: 0 auto;
+    }
+    
+    .resume_container .inner .resume_box{
+        width: 70%;
+        height: 80%;
+    
+    }
+    
+    .resume_container .inner .resume{
+        height: 15%;
+        position: relative;
+        border-bottom: 1px solid white;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        transform: translateX(-50px);
+        opacity: 0;
+        
+    }
+    
+    .resume_container .inner .resume.tranX{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .resume_container .inner .resume::before{
+        content: '';
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 0;
+        background-color: rgba(145, 145, 141, 0.438);
+        z-index: -1;
+        transition: all 0.2s;
+    }
+    
+    .resume_container .inner .resume:hover::before{
+        content: '';
+        height: 100%;
+    }
+    
+    .resume_container .inner .resume:hover {
+        color: var(--main-color);
+        -webkit-text-stroke: 1px var(--main-color);
+    }
+    .resume_container .inner .resume h2{
+        font-size: 40px;
+        margin: 0;
+        margin-left: 100px;
+        vertical-align: middle;
+    }
+    
+    
+    .resume_container .inner .resume:nth-child(6){
+        border:none
+    }
+    .resume_container .inner .resume .resume_entire{
+        font-size: 18px;
+    }
+    
 
 }
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width:767px) {
+
+    .contect_title{
+        font-size: 54px;
+    }
+    .resume_container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .resume_container::before {
+        content: 'Resume';
+        white-space: nowrap;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 10%;
+        font-size: 15rem;
+        opacity: 0.03;
+    }
+    
+    .resume_container .inner{
+        width: 90%;
+        height: 70%;
+        margin: 0 auto;
+    }
+    
+    .resume_container .inner .resume_box{
+        width: 70%;
+        height: 80%;
+    
+    }
+    
+    .resume_container .inner .resume{
+        height: 15%;
+        position: relative;
+        border-bottom: 1px solid white;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        transform: translateX(-10px);
+        opacity: 0;
+        
+    }
+    
+    .resume_container .inner .resume.tranX{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .resume_container .inner .resume::before{
+        content: '';
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 0;
+        background-color: rgba(145, 145, 141, 0.438);
+        z-index: -1;
+        transition: all 0.2s;
+    }
+    
+    .resume_container .inner .resume:hover::before{
+        content: '';
+        height: 100%;
+    }
+    
+    .resume_container .inner .resume:hover {
+        color: var(--main-color);
+        -webkit-text-stroke: 1px var(--main-color);
+    }
+    .resume_container .inner .resume h2{
+        font-size: 18px;
+        margin: 0;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    
+    
+    .resume_container .inner .resume:nth-child(6){
+        border:none
+    }
+    .resume_container .inner .resume .resume_entire{
+        font-size: 16px;
+    }
+
+}
+
 
 
 

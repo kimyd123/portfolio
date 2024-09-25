@@ -1,10 +1,7 @@
 #contect {
-    background-image: url("../image/bg1.svg");
-    background-repeat: no-repeat;
-    background-position: 20%;
-    background-size: contain;
-
+    position: relative;
 }
+
 
 #contect .inner {
     margin: 0 auto;
@@ -13,83 +10,129 @@
 #contect .contect_title {
     font-size: 96px;
     text-align: center;
-    margin: 100px 0 50px;
+    margin: 0px 0 50px;
 }
 
-#contect .contect_wrap {
+#contect .contect_content_box{
+    padding-top: 50px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-
+    align-items: center;
 }
 
 #contect .contect_content {
-    font-size: 62px;
+    height: 70%;
+    font-size: 48px;
     margin: 0;
+    line-height: 70px;
 }
 
 #contect .contect_box {
     white-space: nowrap;
-    line-height: 108px;
+    line-height: 80px;
+    display: flex;
+    justify-content: center;
+}
+#contect .contect_box>div{
     display: flex;
     flex-direction: column;
+    align-content: center;
+    padding-left: 50px;
 }
+
+#contect .contect_box img{
+    transform-origin: center;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#contect .contect_box span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
 #contect .contect_box ul {
+    margin-top: 80px;
     display: flex;
     justify-content: start;
     padding: 0;
 }
 #contect .contect_box ul li {
-    width: 30%;
+    width: 10%;
+    padding-right: 100px;
 }
 
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1023px) {
     #contect {
-        background-image: url("../image/bg1.svg");
-        background-repeat: no-repeat;
-        background-position: 20%;
-        background-size: contain;
+        position: relative;
     }
     
+    
     #contect .inner {
-        width: 90%;
         margin: 0 auto;
     }
     
     #contect .contect_title {
-        font-size: 72px;
+        font-size: 54px;
         text-align: center;
-        margin: 45px 0 50px;
+        margin: 0px 0 50px;
     }
     
-    #contect .contect_wrap {
+    #contect .contect_content_box{
+        padding-top: 0px;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        /* border: 1px solid red; */
-    
+        align-items: center;
     }
     
     #contect .contect_content {
+        height: 70%;
         font-size: 32px;
         margin: 0;
+        line-height: 60px;
     }
     
     #contect .contect_box {
-        white-space: wrap;
-        line-height: 56px;
+        white-space: nowrap;
+        line-height: 80px;
+        display: flex;
+        justify-content: center;
+    }
+    #contect .contect_box>div{
         display: flex;
         flex-direction: column;
+        align-content: center;
+        padding-left: 50px;
     }
+    
+    #contect .contect_box img{
+        transform-origin: center;
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    
+    #contect .contect_box span{
+        color: var(--main-color);
+        font-weight: bold;
+    }
+    
+    
     #contect .contect_box ul {
+        margin-top: 80px;
         display: flex;
         justify-content: start;
         padding: 0;
     }
     #contect .contect_box ul li {
-        width: 30%;
+        width: 10%;
+        padding-right: 100px;
     }
     
 
@@ -98,49 +141,73 @@
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
     #contect {
-        background-image: url("../image/bg1.svg");
-        background-repeat: no-repeat;
-        background-position: 20%;
-        background-size: contain;
+        position: relative;
     }
     
+    
     #contect .inner {
-        width: 90%;
         margin: 0 auto;
     }
     
     #contect .contect_title {
         font-size: 54px;
         text-align: center;
-        margin: 45px 0 50px;
+        margin: 0px 0 50px;
     }
     
-    #contect .contect_wrap {
+    #contect .contect_content_box{
+        padding-top: 0px;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-
-    
+        align-items: center;
     }
     
     #contect .contect_content {
-        font-size: 32px;
+        height: 70%;
+        font-size: 18px;
         margin: 0;
+        line-height: 32px;
     }
     
     #contect .contect_box {
-        white-space: wrap;
-        line-height: 56px;
+        white-space: nowrap;
+        line-height: 80px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
+    #contect .contect_box>div{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 0px;
+    }
+    
+    #contect .contect_box img{
+        margin: 0 auto 40px auto;
+        transform-origin: center;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    
+    #contect .contect_box span{
+        color: var(--main-color);
+        font-weight: bold;
+    }
+    
+    
     #contect .contect_box ul {
+        margin-top: 20px;
         display: flex;
         justify-content: start;
         padding: 0;
     }
     #contect .contect_box ul li {
-        width: 30%;
+        width: 10%;
+        padding-right: 50px;
     }
+    
 
 }
