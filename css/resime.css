@@ -1,95 +1,3 @@
-/* .resume_container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.resume_container::before {
-    content: 'Resume';
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 10%;
-    font-size: 15rem;
-    opacity: 0.03;
-}
-
-.resume_container .inner{
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-}
-
-.resume_container .inner .resume_box{
-    width: 70%;
-    height: 80%;
-
-}
-
-.resume_container .inner .resume{
-    height: 15%;
-    position: relative;
-    border-bottom: 1px solid white;
-    -webkit-text-stroke: 1px white;
-    color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s;
-    transform: translateX(-100px);
-    opacity: 0;
-    
-}
-
-.resume_container .inner .resume.tranX{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.resume_container .inner .resume::before{
-    content: '';
-    width: 100%;
-    height: 0;
-    position: absolute;
-    top: 0;
-    background-color: rgba(145, 145, 141, 0.438);
-    z-index: -1;
-    transition: all 0.2s;
-}
-
-.resume_container .inner .resume:hover::before{
-    content: '';
-    height: 100%;
-}
-
-.resume_container .inner .resume:hover {
-    color: var(--main-color);
-    -webkit-text-stroke: 1px var(--main-color);
-}
-.resume_container .inner .resume h2{
-    font-size: 40px;
-    margin: 0;
-    margin-left: 100px;
-    vertical-align: middle;
-}
-
-
-.resume_container .inner .resume:nth-child(6){
-    border:none
-}
-.resume_container .inner .resume .resume_entire{
-    font-size: 18px;
-} */
-
-
-/*버전2*/
 
 .resume_container{
     height: 100vh;
@@ -126,13 +34,14 @@
 }
 
 .resume_container .resume_box .resume_title{
-    width: 40%;
+    width: 80%;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
+
 
 .resume_container .resume_box .resume_card_box{
     width: 60%;
@@ -154,6 +63,10 @@
     opacity: 0;
 }
 
+.resume_container .resume_box .resume_card_box .resume_card:hover{
+    cursor: url(../image/cursor_click.png) 54 54,auto;;
+}
+
 .resume_container .resume_box .resume_card_box .resume_card p{
     width: 100%;
     height: 30%;
@@ -161,7 +74,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: rgba(121, 121, 121, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     text-align: center;
     font-size: 21px;
@@ -184,10 +97,6 @@
     transform: rotate(10deg);
 }
 
-.resume_container .resume_box .resume_card:nth-child(5){
-    transform: rotate(-5deg);
-}
-
 .resume_container .resume_box img{
     width: 300px;
     height: 400px;
@@ -199,6 +108,69 @@
 
 
 
+.modal_resume{
+    position: fixed;
+    left: 70%;
+    top: 50%;
+    width: 600px;
+    height: 800px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px black;
+    border-radius: 40px;
+    visibility: hidden;
+}
+
+.modal_resume::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.modal_resume:nth-child(1){
+    background: url(../image/이력서카드/성장과정.png);
+    background-position: center ;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.modal_resume:nth-child(2){
+    background: url(../image/이력서카드/성격장단점.png);
+    background-position: center ;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.modal_resume:nth-child(3){
+    background: url(../image//이력서카드/가치관신조.png);
+    background-position: center ;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.modal_resume:nth-child(4){
+    background: url(../image/이력서카드/지원동기포부.png);
+    background-position: center ;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.modal_resume .modal_resume_text{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 50px 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 5px black;
+    border-radius: 40px;
+    line-height: 30px;
+}
+
+
+.modal_resum_slide{
+    visibility: visible;
+}
+
 
 
 
@@ -208,15 +180,13 @@
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1023px) {
     .resume_container{
-        position: relative;
-        width: 100%;
         height: 100vh;
-        margin: 0 auto;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
-    
     
     .resume_container::before {
         content: 'Resume';
@@ -225,77 +195,122 @@
         height: 100%;
         position: absolute;
         left: 0;
-        top: 10%;
+        top: 5%;
         font-size: 15rem;
         opacity: 0.03;
+        z-index: -1;
     }
     
     .resume_container .inner{
         width: 80%;
-        height: 70%;
-        margin: 0 auto;
-    }
-    
-    .resume_container .inner .resume_box{
-        width: 70%;
-        height: 80%;
-    
-    }
-    
-    .resume_container .inner .resume{
-        height: 15%;
-        position: relative;
-        border-bottom: 1px solid white;
-        -webkit-text-stroke: 1px white;
-        color: transparent;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.5s;
-        transform: translateX(-50px);
-        opacity: 0;
-        
-    }
-    
-    .resume_container .inner .resume.tranX{
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
-    .resume_container .inner .resume::before{
-        content: '';
-        width: 100%;
-        height: 0;
-        position: absolute;
-        top: 0;
-        background-color: rgba(145, 145, 141, 0.438);
-        z-index: -1;
-        transition: all 0.2s;
-    }
-    
-    .resume_container .inner .resume:hover::before{
-        content: '';
         height: 100%;
     }
     
-    .resume_container .inner .resume:hover {
-        color: var(--main-color);
-        -webkit-text-stroke: 1px var(--main-color);
+    .resume_container .resume_box{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
-    .resume_container .inner .resume h2{
-        font-size: 40px;
+    
+    .resume_container .resume_box .resume_title{
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    
+    .resume_container .resume_box .resume_card_box{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    
+    .resume_container .resume_box .resume_card_box > div{
+        width: 50%;
+        position: relative;
+    }
+    
+    .resume_container .resume_box .resume_card_box .resume_card{
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    
+    .resume_container .resume_box .resume_card_box .resume_card:hover{
+        cursor: url(../image/cursor_click.png) 54 54,auto;;
+    }
+    
+    .resume_container .resume_box .resume_card_box .resume_card p{
+        width: 100%;
+        height: 30%;
         margin: 0;
-        margin-left: 100px;
-        vertical-align: middle;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
+        text-align: center;
+        font-size: 21px;
+        box-sizing: border-box;
+        padding-top: 40px;
+    }
+
+    .resume_container .resume_box img{
+        width: 300px;
+        height: 400px;
+        background-color: aquamarine;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 0 10px black;
     }
     
     
-    .resume_container .inner .resume:nth-child(6){
-        border:none
+    .modal_resume{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 600px;
+        height: 800px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px black;
+        border-radius: 40px;
+        visibility: hidden;
     }
-    .resume_container .inner .resume .resume_entire{
-        font-size: 18px;
+    
+    .modal_resume::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
+    
+    
+    .modal_resume .modal_resume_text{
+        box-sizing: border-box;
+        height: 100%;
+        padding: 50px 100px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-shadow: 1px 1px 5px black;
+        border-radius: 40px;
+        line-height: 30px;
+    }
+    
+    
+    .modal_resum_slide{
+        visibility: visible;
+    }
+
+    
     
 
 }
@@ -303,95 +318,141 @@
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
 
-    .resume_container{
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     
-    
-    .resume_container::before {
-        content: 'Resume';
-        white-space: nowrap;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 10%;
-        font-size: 15rem;
-        opacity: 0.03;
-    }
-    
-    .resume_container .inner{
-        width: 90%;
-        height: 70%;
-        margin: 0 auto;
-    }
-    
-    .resume_container .inner .resume_box{
-        width: 70%;
-        height: 80%;
-    
-    }
-    
-    .resume_container .inner .resume{
-        height: 15%;
-        position: relative;
-        border-bottom: 1px solid white;
-        -webkit-text-stroke: 1px white;
-        color: transparent;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.5s;
-        transform: translateX(-10px);
-        opacity: 0;
-        
-    }
-    
-    .resume_container .inner .resume.tranX{
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
-    .resume_container .inner .resume::before{
-        content: '';
-        width: 100%;
-        height: 0;
-        position: absolute;
-        top: 0;
-        background-color: rgba(145, 145, 141, 0.438);
-        z-index: -1;
-        transition: all 0.2s;
-    }
-    
-    .resume_container .inner .resume:hover::before{
-        content: '';
-        height: 100%;
-    }
-    
-    .resume_container .inner .resume:hover {
-        color: var(--main-color);
-        -webkit-text-stroke: 1px var(--main-color);
-    }
-    .resume_container .inner .resume h2{
-        font-size: 18px;
-        margin: 0;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
-    
-    
-    .resume_container .inner .resume:nth-child(6){
-        border:none
-    }
-    .resume_container .inner .resume .resume_entire{
-        font-size: 16px;
-    }
+.resume_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.resume_container::before {
+    content: 'Resume';
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    font-size: 15rem;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+.resume_container .inner{
+    width: 100%;
+    height: 100%;
+}
+
+.resume_container .resume_box{
+    display: flex;
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume_container .resume_box .resume_title{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.resume_container .resume_box .resume_card_box{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.resume_container .resume_box .resume_card_box > div{
+    width: 50%;
+    position: relative;
+}
+
+.resume_container .resume_box .resume_card_box .resume_card{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.resume_container .resume_box .resume_card_box .resume_card:hover{
+    cursor: url(../image/cursor_click.png) 54 54,auto;;
+}
+
+.resume_container .resume_box .resume_card_box .resume_card p{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.resume_container .resume_box img{
+    width: 200px;
+    height: 300px;
+    background-color: aquamarine;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+}
+
+
+.modal_resume{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px black;
+    border-radius: 40px;
+    visibility: hidden;
+}
+
+.modal_resume::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+.modal_resume .modal_resume_text{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 50px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 5px black;
+    border-radius: 40px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+
+.modal_resum_slide{
+    visibility: visible;
+}
+
 
 }
 

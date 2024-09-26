@@ -38,6 +38,29 @@
 
 
 
+            //이력서 카드모달
+            
+            const modal_resume = document.querySelectorAll('.modal_resume');
+            const resume_cards = document.querySelectorAll('.resume_card');
+            const modal_resume_box = document.querySelector('.modal_resume_box');
+
+            resume_cards.forEach((el,i)=>{
+              el.addEventListener('click',(e)=>{
+
+                resume_cards.forEach((el)=>{
+                  el.classList.remove('modal_resum_slide');
+                  modal_resume_box.addEventListener('click',(e)=>{
+                    console.log('dddd');
+                    const evTarget = e.target;
+                    if (evTarget.classList.contains("modal_resume")) {
+                      modal_resume[i].classList.remove('modal_resum_slide');
+                    }
+                  });
+                });
+                modal_resume[i].classList.toggle('modal_resum_slide');
+              });
+            })
+
 
 
 
@@ -295,10 +318,12 @@
             // 각 카드에 대해 애니메이션 설정
 
             gsap.fromTo(list[0],{
+              display: 'none',
               rotate: 0,
-              x : -50
+              x : -100
             },{
               opacity : 1,
+              display: 'block',
               rotate: 10,
               x : 0,
               scrollTrigger: {
@@ -310,11 +335,13 @@
               }
             })
             gsap.fromTo(list[1],{
+              display: 'none',
               rotate: 0,
-              x : 50
+              x : 150
             },
               {
-              opacity : 1,
+                opacity : 1,
+                display: 'block',
               rotate: -20,
               x : 0,
               scrollTrigger: {
@@ -327,11 +354,13 @@
             })
 
             gsap.fromTo(list[2],{
+              display: 'none',
               rotate: 0,
-              x : -80
+              x : -180
             },
             {
               opacity : 1,
+              display: 'block',
               rotate: 20,
               x : 0,
               scrollTrigger: {
@@ -344,11 +373,13 @@
             })
 
             gsap.fromTo(list[3],{
+              display: 'none',
               rotate: 0,
-              x : 50
+              x : 150
             },
             {
               opacity : 1,
+              display: 'block',
               rotate: -5,
               x : 0,
               scrollTrigger: {

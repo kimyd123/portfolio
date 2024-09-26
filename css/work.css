@@ -231,6 +231,59 @@
     #work .work_content_fig:nth-child(even) {
         flex-direction: row-reverse;
     }
+
+    .modal{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        left: 0;
+        bottom: 0%;
+        width: 100vw;
+        height: 0;
+        z-index: 1000;
+        /* transition: all 0.5s ease-in-out; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal_body{
+        overflow-y: auto;
+        width: 80%;
+        height: 90%;
+        background-color: #1d1d1d;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px white;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    
+    .modal_body h2{
+        margin: 50px 0 0 0;
+    }
+    
+    .modal_body img{
+        width: 80%;
+        height: 50%;
+        object-fit: cover;
+    }
+    
+    .modal_body p{
+        margin: 50px 0 25px 0;
+        align-self: self-start;
+        padding: 0 15%;
+    }
+    
+    .modal_body p:nth-child(5){
+        align-self: flex-end;
+    }
+    
+    .modal_slide{
+        height: 100vh;
+    }
+    
     
     
 
@@ -320,6 +373,60 @@
     
     #work .work_content_fig:hover .work_img {
         filter : grayscale(0)
+    }
+
+
+    .modal{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        left: 0;
+        bottom: 0%;
+        width: 100vw;
+        height: 0;
+        z-index: 1000;
+        /* transition: all 0.5s ease-in-out; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal_body{
+        overflow-y: auto;
+        width: 80%;
+        height: 50%;
+        background-color: #1d1d1d;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px white;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    
+    .modal_body h2{
+        margin: 50px 0 0 0;
+    }
+    
+    .modal_body img{
+        margin-top: 20px;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+    
+    .modal_body p{
+        margin: 50px 0 25px 0;
+        align-self: self-start;
+        padding: 0 15%;
+    }
+    
+    .modal_body p:nth-child(5){
+        align-self: flex-end;
+    }
+    
+    .modal_slide{
+        height: 100vh;
     }
     
 
