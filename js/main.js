@@ -284,6 +284,103 @@
           }
         });
 
+        //--------------------------
+
+        const cards = document.querySelectorAll('.resume_card');
+        ScrollTrigger.matchMedia({
+
+          '(min-width: 300px)': function () {
+            let list = gsap.utils.toArray(cards);
+      
+            // 각 카드에 대해 애니메이션 설정
+
+            gsap.fromTo(list[0],{
+              rotate: 0,
+              x : -50
+            },{
+              opacity : 1,
+              rotate: 10,
+              x : 0,
+              scrollTrigger: {
+                trigger: '.resume_container',
+                scrub: 2,
+                start: 'center center',
+                end: 'bottom bottom',
+                markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
+              }
+            })
+            gsap.fromTo(list[1],{
+              rotate: 0,
+              x : 50
+            },
+              {
+              opacity : 1,
+              rotate: -20,
+              x : 0,
+              scrollTrigger: {
+                trigger: '.resume_container',
+                scrub: 2,
+                start: '+=100% center',
+                end: 'bottom bottom',
+                markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
+              }
+            })
+
+            gsap.fromTo(list[2],{
+              rotate: 0,
+              x : -80
+            },
+            {
+              opacity : 1,
+              rotate: 20,
+              x : 0,
+              scrollTrigger: {
+                trigger: '.resume_container',
+                scrub: 2,
+                start: '+=200% center',
+                end: 'bottom bottom',
+                markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
+              }
+            })
+
+            gsap.fromTo(list[3],{
+              rotate: 0,
+              x : 50
+            },
+            {
+              opacity : 1,
+              rotate: -5,
+              x : 0,
+              scrollTrigger: {
+                trigger: '.resume_container',
+                scrub: 2,
+                start: '+=300% center',
+                end: 'bottom bottom',
+                markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
+              }
+            })
+
+        
+            // 스크롤 트리거 설정 (전체 스크롤에 따른 핀 설정)
+            gsap.to(list, {
+              ease: 'none',
+              scrollTrigger: {
+                trigger: '.resume_container',
+                pin: true,
+                pinSpacing: true,
+                scrub: 1,
+                start: 'center center',
+                end: '300%',
+                markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
+              }
+            });
+          }
+        });
+
+
+        //--------------------------
+
+
 
         const io2 = new IntersectionObserver(entries => {
           entries.forEach(entry => {
@@ -324,6 +421,9 @@
           repeat: -1,          
           yoyo: true           
         });
+
+
+
 
 
 

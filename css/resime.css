@@ -1,4 +1,4 @@
-.resume_container{
+/* .resume_container{
     position: relative;
     width: 100%;
     height: 100vh;
@@ -86,7 +86,119 @@
 }
 .resume_container .inner .resume .resume_entire{
     font-size: 18px;
+} */
+
+
+/*버전2*/
+
+.resume_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+.resume_container::before {
+    content: 'Resume';
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    font-size: 15rem;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+.resume_container .inner{
+    width: 50%;
+    height: 100%;
+}
+
+.resume_container .resume_box{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume_container .resume_box .resume_title{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resume_container .resume_box .resume_card_box{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.resume_container .resume_box .resume_card_box > div{
+    width: 50%;
+    position: relative;
+}
+
+.resume_container .resume_box .resume_card_box .resume_card{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.resume_container .resume_box .resume_card_box .resume_card p{
+    width: 100%;
+    height: 30%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(121, 121, 121, 0.7);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 21px;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.resume_container .resume_box .resume_card:nth-child(1){
+    transform: rotate(10deg);
+}
+.resume_container .resume_box .resume_card:nth-child(2){
+    transform: rotate(20deg);
+}
+
+.resume_container .resume_box .resume_card:nth-child(3){
+    transform: rotate(-15deg);
+}
+
+.resume_container .resume_box .resume_card:nth-child(4){
+    transform: rotate(10deg);
+}
+
+.resume_container .resume_box .resume_card:nth-child(5){
+    transform: rotate(-5deg);
+}
+
+.resume_container .resume_box img{
+    width: 300px;
+    height: 400px;
+    background-color: aquamarine;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+}
+
+
+
 
 
 

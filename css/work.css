@@ -43,6 +43,9 @@
     margin: 0;
     font-size: 32px;
     font-weight: bold;
+    display: inline-block;
+    transition: all 0.5s;
+    text-shadow: 5px 5px 10px black;
 }
 
 #work .work_img {
@@ -58,6 +61,7 @@
     border-radius: 20px;
     object-fit: cover;
     object-position: center top;
+    box-shadow: 3px 3px 5px black;
 }
 
 #work .work_content_fig:nth-child(1) {
@@ -83,9 +87,17 @@
     transition: all 0.3s ease-in-out;
 }
 
+#work .work_content_fig:hover{
+    cursor: url(../image/cursor_click.png) 54 54,auto;
+}
 #work .work_content_fig:hover .before_hover:before {
     opacity: 0.9;
     transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#work .work_content_fig:hover figure span{
+    transform: scale(1.05);
+    color: white;
 }
 
 #work .work_content_fig:hover .work_img {
@@ -110,7 +122,7 @@
     width: 100vw;
     height: 0;
     z-index: 1000;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,10 +132,9 @@
     overflow-y: auto;
     width: 50%;
     height: 90%;
-    background-color: rgb(8, 8, 8);
+    background-color: #1d1d1d;
     margin: 0 auto;
-    box-shadow: 0px 0px 5px white,
-    0px 0px 5px var(--main-color);
+    box-shadow: 0px 0px 5px white;
     border-radius: 50px;
     display: flex;
     flex-direction: column;

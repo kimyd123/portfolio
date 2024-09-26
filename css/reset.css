@@ -29,6 +29,7 @@ html {
     color: var(--font-color);
     font-size: 18px;
     overflow-x: hidden;
+    cursor: url(../image/cursor_body.png) 54 54,auto;
 }
 ul {
     list-style: none;
@@ -37,6 +38,7 @@ ul {
 a {
     color: var(--font-color);
     text-decoration: none;
+    cursor: url(../image/cursor_click.png) 54 54,auto;
 }
 
 .inner {
