@@ -30,6 +30,20 @@ html {
     overflow-x: hidden;
     cursor: url(../image/cursor_body.png) 54 54,auto;
 }
+
+h1::selection,
+h2::selection,
+span::selection,
+a::selection,
+div::selection,
+img::selection,
+p::selection,
+br::selection
+ {
+    color: white;
+    background-color: #e8176b56;
+}
+
 ul {
     list-style: none;
 }
