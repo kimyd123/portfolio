@@ -62,6 +62,7 @@
     object-fit: cover;
     object-position: center top;
     box-shadow: 3px 3px 5px black;
+
 }
 
 #work .work_content_fig:nth-child(1) {
@@ -79,7 +80,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: var(--bg-color);
+    background-color: var(--main-color);
     border-radius: 20px;
     opacity: 0;
     transform-origin: center;
@@ -90,10 +91,12 @@
 #work .work_content_fig:hover{
     cursor: url(../image/cursor_click.png) 54 54,auto;
 }
+
 #work .work_content_fig:hover .before_hover:before {
     opacity: 0.9;
     transform: translate(-50%, -50%) rotate(0deg);
 }
+
 
 #work .work_content_fig:hover figure span{
     transform: scale(1.05);
@@ -101,7 +104,7 @@
 }
 
 #work .work_content_fig:hover .work_img {
-    filter : grayscale(0)
+    filter : grayscale(0);
 }
 
 #work .work_content_fig:nth-child(even) {
@@ -126,6 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .modal:hover{

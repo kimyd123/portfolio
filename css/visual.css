@@ -4,6 +4,7 @@
     overflow: hidden;
 }
 
+
 #visual .inner {
     width: 55%;
     position: absolute;
@@ -56,10 +57,15 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 15px;
 }
 
 .visual_text span {
     display: block;
+}
+
+.visual_text_decoration{
+    color: var(--main-color);
 }
 
 .visual_text .visual_text1 {

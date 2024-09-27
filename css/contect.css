@@ -48,7 +48,7 @@
 
 
 
-#contect .contect_box span{
+#contect .contect_box b{
     color: var(--main-color);
     font-weight: bold;
 }

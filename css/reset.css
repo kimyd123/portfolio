@@ -38,7 +38,8 @@ a::selection,
 div::selection,
 img::selection,
 p::selection,
-br::selection
+br::selection,
+b::selection
  {
     color: white;
     background-color: #e8176b56;
@@ -100,3 +101,20 @@ body::after{
 .topnav:hover::before{
     opacity: 1;
 }
+
+b{
+    display: inline-block;
+    -webkit-mask-image: linear-gradient(-90deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
