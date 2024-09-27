@@ -2,7 +2,6 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    /* color: white; */
 }
 
 #visual .inner {
@@ -30,12 +29,12 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-    filter: saturate(65%);
+    filter: brightness(0.5);
 }
 
 .planet2 {
     left: 30%;
-    top: 56%;
+    top: 45%;
 }
 .planet3 {
     left: 70%;
@@ -102,7 +101,6 @@
         left: 50%;
         top: 40%;
         transform: translate(-50%, -50%);
-        filter: saturate(65%);
     }
     #visual .planet1 {
         width: 50%;
@@ -180,22 +178,20 @@
         position: absolute;
         left: 50%;
         top: 40%;
-        transform: translate(-50%, -50%);
-        filter: saturate(65%);
     }
     #visual .planet1 {
-        width: 50%;
+        width: 90%;
         top: 30%;
     }
     #visual .planet2 {
-        width: 15%;
-        left: 30%;
-        top: 56%;
+        width: 30%;
+        left: 50%;
+        top: 40%;
     }
     #visual .planet3 {
-        width: 15%;
-        left: 70%;
-        top: 30%;
+        width: 30%;
+        left: 50%;
+        top: 50%;
     }
 
     #visual .visual_text_title {

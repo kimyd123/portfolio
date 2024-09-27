@@ -42,6 +42,10 @@
     align-items: flex-start;
 }
 
+.resume_container .resume_box .resume_title h2{
+    font-size: 32px;
+}
+
 
 .resume_container .resume_box .resume_card_box{
     width: 60%;
@@ -110,7 +114,7 @@
 
 .modal_resume{
     position: fixed;
-    left: 70%;
+    left: 65%;
     top: 50%;
     width: 600px;
     height: 800px;
@@ -118,6 +122,10 @@
     box-shadow: 0 0 10px black;
     border-radius: 40px;
     visibility: hidden;
+}
+
+.modal_resume:hover{
+    cursor: url(../image/cursor_close.png) 54 54,auto;
 }
 
 .modal_resume::before{

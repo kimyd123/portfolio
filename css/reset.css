@@ -1,8 +1,7 @@
 :root{
     --bg-color : #1D1D1D;
-    --font-color: #f3f3f3;
+    --font-color: white;
     --main-color: #e8176b;
-    --auxiliary-color1 : #315078;
 }
 
 .Point_color{

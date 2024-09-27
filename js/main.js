@@ -19,7 +19,6 @@
       //모달
       const modals = document.querySelectorAll('.modal');
 
-
       work_content_fig.forEach((el,i)=>{
 
         el.addEventListener('click',(e)=>{
@@ -214,18 +213,7 @@
           y :500
         });
 
-        const tl_9 = gsap.timeline({
-          scrollTrigger: {
-            trigger: '#visual',  
-            start: "top top",   
-            end: "bottom top",
-            scrub: 2,         
-            markers: false     
-          }
-        });
-        tl_9.to(".gsap_item12", {
-          y :500
-        });
+
 
 
         gsap.to(".gsap_item4", {

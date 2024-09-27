@@ -128,6 +128,10 @@
     align-items: center;
 }
 
+.modal:hover{
+    cursor: url(../image/cursor_close.png) 54 54,auto;
+}
+
 .modal_body{
     overflow-y: auto;
     width: 50%;
@@ -140,6 +144,10 @@
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+}
+
+.modal_body:hover{
+    cursor: url(../image/cursor_body.png) 54 54,auto;
 }
 
 .modal_body h2{
