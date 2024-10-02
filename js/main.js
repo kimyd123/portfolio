@@ -90,7 +90,7 @@
             trigger: '#visual',  
             start: "5% top",   
             end: "bottom top",
-            scrub: 2,              
+            scrub: 1,              
             markers: false     
           }
         });
@@ -112,7 +112,7 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 3,              
+            scrub: 1,              
             markers: false     
           }
         });
@@ -131,7 +131,7 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 5,              
+            scrub: 1,              
             markers: false     
           }
         });
@@ -152,7 +152,7 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 2,              
+            scrub: 1,              
             markers: false     
           }
         });
@@ -179,7 +179,7 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 2,              
+            scrub: 1,              
             markers: false     
           }
         });
@@ -192,7 +192,7 @@
             trigger: '#visual',  
             start: "top top",   
             end: "bottom top",
-            scrub: 3,             
+            scrub: 1,             
             markers: false     
           }
         });
@@ -316,7 +316,7 @@
               x : 0,
               scrollTrigger: {
                 trigger: '.resume_container',
-                scrub: 2,
+                scrub: 1,
                 start: 'center center',
                 end: 'bottom bottom',
                 markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
@@ -334,7 +334,7 @@
               x : 0,
               scrollTrigger: {
                 trigger: '.resume_container',
-                scrub: 2,
+                scrub: 1,
                 start: '+=100% center',
                 end: 'bottom bottom',
                 markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
@@ -353,7 +353,7 @@
               x : 0,
               scrollTrigger: {
                 trigger: '.resume_container',
-                scrub: 2,
+                scrub: 1,
                 start: '+=200% center',
                 end: 'bottom bottom',
                 markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
@@ -372,7 +372,7 @@
               x : 0,
               scrollTrigger: {
                 trigger: '.resume_container',
-                scrub: 2,
+                scrub: 1,
                 start: '+=300% center',
                 end: 'bottom bottom',
                 markers: false // 디버깅용 마커 표시 (개발 시 필요에 따라 제거)
@@ -427,7 +427,7 @@
           duration: 3,   
           scrollTrigger: {
             trigger: '#contect',
-            scrub: 3,             
+            scrub: 1,             
             start: 'top center',     
             end: '100% bottom',        
             markers: false        
