@@ -427,7 +427,7 @@
           duration: 3,   
           scrollTrigger: {
             trigger: '#contect',
-            scrub: 1,             
+            scrub: 3,             
             start: 'top center',     
             end: '100% bottom',        
             markers: false        

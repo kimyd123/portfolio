@@ -9,10 +9,12 @@
 }
 
 
+
 /*초기화*/
 
 body,
 html {
+
     font-family: "Gugi", sans-serif;
     background-color: var(--bg-color);
     margin: 0;
