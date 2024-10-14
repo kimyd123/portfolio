@@ -77,7 +77,6 @@
             console.log(e.deltaY);
         }else{
           console.log(e.deltaY);
-
           nav.classList.remove('stiky');
         }
       });
@@ -212,8 +211,6 @@
         tl_8.to(".gsap_item9", {
           y :500
         });
-
-
 
 
         gsap.to(".gsap_item4", {
@@ -398,26 +395,6 @@
 
 
         //--------------------------
-
-
-
-        const io2 = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              console.log('Triggered after scrolling down');
-              entry.target.classList.add('tranX');
-            } else {
-              entry.target.classList.remove('tranX');
-            }
-          });
-        }, {
-          threshold: 1, 
-        });
-        
-        const resume = document.querySelectorAll('.resume');
-        resume.forEach(el => {
-          io2.observe(el);
-        });
 
 
 
