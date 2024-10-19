@@ -209,22 +209,6 @@ t2.to(".gsap_item2", {
     scrub: 1
 });
 
-const t3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '#work',
-        start: "top 80%",
-        end: "bottom top",
-        scrub: 1,
-        markers: false
-    }
-});
-
-t3.to(".gsap_item3", {
-    scale: 2,
-    opacity: 0.2,
-    x: '100%',
-    y: 1000
-});
 
 //스킬카드 가로스크롤
 gsap.registerPlugin(ScrollTrigger);
