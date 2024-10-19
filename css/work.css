@@ -1,5 +1,6 @@
 #work {
     position: relative;
+    margin-bottom: 100px;
 }
 
 .gsap_item3{
@@ -12,6 +13,11 @@
 
 #work .inner {
     margin: 0 auto;
+}
+
+
+figure{
+    margin: 0;
 }
 
 #work .work_title {
@@ -165,7 +171,6 @@
     width: 100%;
     height: 70%;
     object-fit: cover;
-    /* border: 1px solid red; */
 }
 
 .modal_body p{
@@ -217,30 +222,7 @@
         display: inline-block;
         width: 100%;
     }
-    #work .before_hover:before {
-        content: 'VIEW SITE';
-        white-space: nowrap;
-        padding: 8px 50px;
-        font-size: 18px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        background-color: var(--bg-color);
-        border-radius: 20px;
-        opacity: 0;
-        transform-origin: center;
-        transform: translate(-50%, -50%) rotate(90deg);
-        transition: all 0.3s ease-in-out;
-    }
-    
-    #work .work_content_fig:hover .before_hover:before {
-        opacity: 0.9;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    
-    #work .work_content_fig:hover .work_img {
-        filter : grayscale(0)
-    }
+
     
     #work .work_content_fig:nth-child(even) {
         flex-direction: row-reverse;
