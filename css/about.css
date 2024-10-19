@@ -41,7 +41,7 @@
 }
 #about .about_keyword .keyword:hover {
     border: 2px solid var(--main-color);
-    color: white;
+    background-color: var(--main-color);
 }
 
 #about .about_title {
