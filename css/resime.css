@@ -152,26 +152,26 @@
 }
 
 .modal_resume:nth-child(1){
-    background: url(../image/이력서카드/성장과정.png);
+    background: url(../image/resume_bg_card/resume1.png);
     background-position: center ;
     background-size:cover;
     background-repeat: no-repeat;
 
 }
 .modal_resume:nth-child(2){
-    background: url(../image/이력서카드/성격장단점.png);
+    background: url(../image/resume_bg_card/resume2.png);
     background-position: center ;
     background-size:cover;
     background-repeat: no-repeat;
 }
 .modal_resume:nth-child(3){
-    background: url(../image//이력서카드/가치관신조.png);
+    background: url(../image/resume_bg_card/resume3.png);
     background-position: center ;
     background-size:cover;
     background-repeat: no-repeat;
 }
 .modal_resume:nth-child(4){
-    background: url(../image/이력서카드/지원동기포부.png);
+    background: url(../image/resume_bg_card/resume4.png);
     background-position: center ;
     background-size:cover;
     background-repeat: no-repeat;
