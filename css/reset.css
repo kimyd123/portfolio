@@ -99,7 +99,7 @@ b {
     animation: shine 2s infinite;
 }
 
-@-webkit-keyframes shine {
+@keyframes shine {
     from {
         mask-position: 150%;
     }
