@@ -52,6 +52,10 @@ figure {
     text-shadow: 5px 5px 10px black;
 }
 
+#work .work_content_fig p{
+    color: rgb(184, 184, 184);
+}
+
 #work .work_img {
     width: 60%;
     position: relative;
@@ -103,13 +107,14 @@ figure {
 }
 
 #work .work_content_fig:hover figcaption span {
-    transform: scale(1.05);
+    transform: scale(1.08);
     color: white;
 }
 
 #work .work_content_fig:hover .work_img {
     filter : grayscale(0);
 }
+
 
 #work .work_content_fig:nth-child(even) {
     flex-direction: row-reverse;
